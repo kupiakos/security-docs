@@ -18,6 +18,8 @@ Tool | Category | OSs | Description
 [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/) | Variety | Windows | Advanced utilities for Windows. Writes to registry on first run.
 [Fport](https://www.mcafee.com/sg/downloads/free-tools/fport.aspx) | Network | Windows | Gives PID/process names along with network connections, like Linux `netstat -tualpn`
 [Netcat](https://joncraton.org/blog/46/netcat-for-windows/) | Network | All | [See post]({% post_url generic/2018-04-22-netcat %}). Included on most Linux distros by default.
+[argus](https://qosient.com/argus/) | Network | Linux | Generates network flow data
+[snort](https://www.snort.org/) | Network | Linux | Intrusion Detection System
 Netstat | Network | All | Built-in, [Linux post]({% post_url linux/2018-04-22-netstat %}), [Windows post]({% post_url windows/2018-04-22-netstat %})
 [Wireshark](https://www.wireshark.org/) | Network | All | Analyze network packets and packet captures
 [BIND](https://www.isc.org/downloads/bind/) | Network | All | DNS Tools
