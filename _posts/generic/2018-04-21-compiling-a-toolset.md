@@ -1,5 +1,5 @@
 ---
-title: Leave No Trace
+title: Compiling a Toolset
 category: generic
 tags: forensics
 layout: post
@@ -13,7 +13,6 @@ For offline forensics, taking a disk image should use a write blocker.
 
 ## Don't trust the target
 Overall, the live target could be doing nasty things to prevent analysis.
-It could have a 
 Worst, it could have a kernel rootkit installed.
 It's considered best practice to get tools that you trust onto the system.
 This can even include built-in tools, as they may be compromised.
@@ -35,6 +34,10 @@ Lastly, _always take checksums_!
 Sometimes what's built-in is not always what's best!
 See the [Useful Tools]({% post_url generic/2018-04-20-useful-tools %}) document for more.
 
+## Linux tools from `static-get`
+My toolset for Linux primarily contains the following packages from `static-get`:
+coreutils, curl, file, gcc, grep, iptables, less, lsof, net-tools, nmap, procps, psmisc, tcpdump, wget
+
 ## Getting your tools onto the system
 Generally speaking, one should avoid installing drivers, add filesystems, etc.
 So, this is generally the order you should prefer to get items on your system.
@@ -49,9 +52,16 @@ USB Keys will likely require installing drivers, unless it is known that the sys
 On Windows systems, holding down the left shift key should disable autoplay if that's a possible effect.
 
 ## Building an ISO
-Once you've compiled the tools you want.
+Once you've compiled the tools you want, you need to get them onto the system.
+Unless it's a modern laptop, CDs are a great bet.
+To make a CD, or to mount it onto a VM, you need to make an ISO.
 
 ### Linux
+You can use the [`genisoimage`](https://linux.die.net/man/1/genisoimage) tool.
+
+```
+$ genisoimage -o cd.iso -R cd_dir
+```
 
 ### Windows
 Windows loves to make things hard.
