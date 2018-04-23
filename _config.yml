@@ -1,9 +1,9 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
-permalink:        /:categories/:title
+permalink:        /:categories/:title/
 # relative_permalinks: true
 
 # Setup
@@ -17,6 +17,9 @@ author:
   url:            https://alyssa.codes
 
 paginate:         20
+
+github:
+  repo:           https://github.com/kupiakos/security-docs
 
 # Custom vars
 version:          0.1beta

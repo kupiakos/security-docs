@@ -1,0 +1,12 @@
+
+.breadcrumb + .breadcrumb::before {
+    content: ">";
+    padding-right: 5px;
+}
+
+.breadcrumbs {
+    margin-left: -20px;
+    margin-top: -20px;
+    padding-bottom: 40px;
+}
+

@@ -17,10 +17,10 @@
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-      {% assign pages_list = site.pages %}
+      {% assign pages_list = site.pages | concat: site.posts %}
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "page" %}
+          {% if node.sidebar %}
             <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
@@ -31,6 +31,6 @@
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p> <a href="{{site.author.url}}">&copy; {{ site.time | date: '%Y' }}&nbsp;{{ site.author.name }}</a> </p>
   </div>
 </div>

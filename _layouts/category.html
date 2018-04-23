@@ -1,0 +1,23 @@
+---
+layout: default
+permalink: /:category/
+---
+
+<div class="breadcrumbs">
+  <span class="breadcrumb"><a href="{{ site.baseurl }}">Home</a></span>
+  <span class="breadcrumb"><a href="{{ site.baseurl }}{{ page.category }}/">{{ page.category | capitalize }}</a></span>
+</div>
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {% unless page.content == '' %}
+  <p>{{ page.content }}</p>
+  {% endunless %}
+
+  <ul>
+    {% assign category = site.categories.[page.category] %}
+    {% for post in category %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
